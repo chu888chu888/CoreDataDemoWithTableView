@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ShowCoreDataTableTableViewController : UITableViewController
-
+@property(strong,nonatomic) NSMutableArray *teamArray;
 @end

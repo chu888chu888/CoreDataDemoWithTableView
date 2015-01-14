@@ -24,7 +24,7 @@
     [self insertUserInfoWithName:@"楚广明" age:@"37" phone:@"13909869612"];
     [self insertUserInfoWithName:@"小白" age:@"27" phone:@"13909862612"];
     [self insertUserInfoWithName:@"小李" age:@"27" phone:@"13909862612"];
-    [self dataFetchRequest];
+    //[self dataFetchRequest];
     
     self.viewController=[[ShowCoreDataTableTableViewController alloc]init];
     self.navController=[[UINavigationController alloc]initWithRootViewController:self.viewController];
