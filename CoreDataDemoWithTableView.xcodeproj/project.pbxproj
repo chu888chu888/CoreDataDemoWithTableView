@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B94C1E3C1A66460100F31247 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C1E3B1A66460100F31247 /* UserInfo.m */; };
+		B94C1E3F1A664B2C00F31247 /* ShowCoreDataTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C1E3E1A664B2C00F31247 /* ShowCoreDataTableTableViewController.m */; };
 		B98E0F9B1A664440006A3D36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9A1A664440006A3D36 /* main.m */; };
 		B98E0F9E1A664440006A3D36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9D1A664440006A3D36 /* AppDelegate.m */; };
 		B98E0FA11A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9F1A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		B94C1E3A1A66460100F31247 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		B94C1E3B1A66460100F31247 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		B94C1E3D1A664B2C00F31247 /* ShowCoreDataTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCoreDataTableTableViewController.h; sourceTree = "<group>"; };
+		B94C1E3E1A664B2C00F31247 /* ShowCoreDataTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCoreDataTableTableViewController.m; sourceTree = "<group>"; };
 		B98E0F951A664440006A3D36 /* CoreDataDemoWithTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemoWithTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98E0F991A664440006A3D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98E0F9A1A664440006A3D36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				B98E0F981A664440006A3D36 /* Supporting Files */,
 				B94C1E3A1A66460100F31247 /* UserInfo.h */,
 				B94C1E3B1A66460100F31247 /* UserInfo.m */,
+				B94C1E3D1A664B2C00F31247 /* ShowCoreDataTableTableViewController.h */,
+				B94C1E3E1A664B2C00F31247 /* ShowCoreDataTableTableViewController.m */,
 			);
 			path = CoreDataDemoWithTableView;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				B94C1E3C1A66460100F31247 /* UserInfo.m in Sources */,
 				B98E0F9E1A664440006A3D36 /* AppDelegate.m in Sources */,
 				B98E0FA11A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld in Sources */,
+				B94C1E3F1A664B2C00F31247 /* ShowCoreDataTableTableViewController.m in Sources */,
 				B98E0F9B1A664440006A3D36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

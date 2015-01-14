@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UserInfo.h"
+#import "ShowCoreDataTableTableViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -24,6 +25,11 @@
     [self insertUserInfoWithName:@"小白" age:@"27" phone:@"13909862612"];
     [self insertUserInfoWithName:@"小李" age:@"27" phone:@"13909862612"];
     [self dataFetchRequest];
+    
+    self.viewController=[[ShowCoreDataTableTableViewController alloc]init];
+    self.navController=[[UINavigationController alloc]initWithRootViewController:self.viewController];
+    self.window.rootViewController=self.navController;
+    
     return YES;
 }
 
