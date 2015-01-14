@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "UserInfo.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +20,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self insertUserInfoWithName:@"楚广明" age:@"37" phone:@"13909869612"];
+    [self insertUserInfoWithName:@"小白" age:@"27" phone:@"13909862612"];
+    [self insertUserInfoWithName:@"小李" age:@"27" phone:@"13909862612"];
+    [self dataFetchRequest];
     return YES;
 }
 
@@ -126,5 +130,59 @@
         }
     }
 }
-
+#pragma mark - 初始化数据
+-(BOOL)insertUserInfoWithName:(NSString *)name age:(NSString *)age phone:(NSString*)phone
+{
+    
+    if (!name||!age||!phone) {
+        return NO;
+    }
+    
+    UserInfo  *userInfoObject = [self getUserInfoByName:name];
+    if (nil == userInfoObject) {
+        userInfoObject = [NSEntityDescription insertNewObjectForEntityForName:@"UserInfo" inManagedObjectContext:self.managedObjectContext];
+    }
+    userInfoObject.username = name;
+    userInfoObject.age=age;
+    userInfoObject.phone=phone;
+    return YES;
+}
+-(UserInfo *)getUserInfoByName:(NSString *)name
+{
+    UserInfo *userInfoObject=nil;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *UserInfoEntity = [NSEntityDescription entityForName:@"UserInfo" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:UserInfoEntity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username == %@", name];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setFetchLimit:1];
+    
+    NSError *error = NULL;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Error : %@\n", [error localizedDescription]);
+    }
+    
+    if (array && [array count] > 0) {
+        userInfoObject = [array objectAtIndex:0];
+    }
+    
+    
+    return userInfoObject;
+}
+- (void)dataFetchRequest
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"UserInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects) {
+        NSLog(@"username:%@", [info valueForKey:@"username"]);
+    }
+}
 @end

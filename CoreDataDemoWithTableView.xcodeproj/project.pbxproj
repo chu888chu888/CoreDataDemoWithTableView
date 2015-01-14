@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B94C1E3C1A66460100F31247 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C1E3B1A66460100F31247 /* UserInfo.m */; };
 		B98E0F9B1A664440006A3D36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9A1A664440006A3D36 /* main.m */; };
 		B98E0F9E1A664440006A3D36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9D1A664440006A3D36 /* AppDelegate.m */; };
 		B98E0FA11A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B98E0F9F1A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B94C1E3A1A66460100F31247 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		B94C1E3B1A66460100F31247 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		B98E0F951A664440006A3D36 /* CoreDataDemoWithTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemoWithTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98E0F991A664440006A3D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98E0F9A1A664440006A3D36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				B98E0FA41A664440006A3D36 /* LaunchScreen.xib */,
 				B98E0F9F1A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld */,
 				B98E0F981A664440006A3D36 /* Supporting Files */,
+				B94C1E3A1A66460100F31247 /* UserInfo.h */,
+				B94C1E3B1A66460100F31247 /* UserInfo.m */,
 			);
 			path = CoreDataDemoWithTableView;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94C1E3C1A66460100F31247 /* UserInfo.m in Sources */,
 				B98E0F9E1A664440006A3D36 /* AppDelegate.m in Sources */,
 				B98E0FA11A664440006A3D36 /* CoreDataDemoWithTableView.xcdatamodeld in Sources */,
 				B98E0F9B1A664440006A3D36 /* main.m in Sources */,
@@ -398,6 +404,7 @@
 				B98E0FB71A664440006A3D36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B98E0FB81A664440006A3D36 /* Build configuration list for PBXNativeTarget "CoreDataDemoWithTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +413,7 @@
 				B98E0FBA1A664440006A3D36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
