@@ -31,7 +31,6 @@
     }
     self.teamArray=[[NSMutableArray alloc]initWithCapacity:50];
     [self dataCount];
-    //[teamArray count];
     return self;
 }
 -(void)addCoreData
