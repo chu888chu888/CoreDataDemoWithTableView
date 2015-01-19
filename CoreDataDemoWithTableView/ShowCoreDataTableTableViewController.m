@@ -8,6 +8,7 @@
 
 #import "ShowCoreDataTableTableViewController.h"
 #import "ShowUserInfoDetailViewController.h"
+#import "AddCoreDataViewController.h"
 #import "UserInfo.h"
 #import "AppDelegate.h"
 @interface ShowCoreDataTableTableViewController ()
@@ -22,16 +23,22 @@
     if (self) {
         self.navigationItem.title=@"数据持久化演示";
         //在右侧添加按钮
-        UIBarButtonItem *rightItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
+        UIBarButtonItem *rightItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCoreData)];
         self.navigationItem.rightBarButtonItem=rightItem;
         //在左侧添加按钮
-        UIBarButtonItem *leftItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:nil action:nil];
+        UIBarButtonItem *leftItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:nil];
         self.navigationItem.leftBarButtonItem=leftItem;
     }
     self.teamArray=[[NSMutableArray alloc]initWithCapacity:50];
     [self dataCount];
     //[teamArray count];
     return self;
+}
+-(void)addCoreData
+{
+    AddCoreDataViewController *addCoreDataVC=[[AddCoreDataViewController alloc]init];
+    [self.navigationController pushViewController:addCoreDataVC animated:YES];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,7 +84,9 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UserInfo *UserinfoObject = [self.teamArray objectAtIndex:indexPath.row];
     ShowUserInfoDetailViewController *ShowUserInfoVC = [[ShowUserInfoDetailViewController alloc] init] ;
+    ShowUserInfoVC.username=UserinfoObject.username;
     [self.navigationController pushViewController:ShowUserInfoVC animated:YES];
 }
 /*

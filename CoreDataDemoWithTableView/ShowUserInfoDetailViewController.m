@@ -13,10 +13,11 @@
 @end
 
 @implementation ShowUserInfoDetailViewController
-
+@synthesize username,age;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"传递过来的username:%@",self.username);
 }
 
 - (void)didReceiveMemoryWarning {
